@@ -89,7 +89,7 @@
         $as = new \SimpleSAML\Auth\Simple($_SESSION['idp']);
         $attributes = $as->getAttributes();
         echo "<br><h3 style='background-color: #abcdef; width: 80%; padding:25px;margin: 10px auto; border: #5bc0de 1px solid; border-radius: 10px;opacity: 0.6' >Attributes recieved<br>";
-        echo "My  IDP: ". $_SESSION['idp'].$as->getAuthData('saml:sp:IdP')."<br><hr>";
+        echo "My  IdP: ". $_SESSION['idp'].$as->getAuthData('saml:sp:IdP')."<br><hr>";
         echo "<hr><table style='text-align:left; width: 100%'><tr><th>Attribute Id:</th><th>Value:</th></tr>";
         foreach ($attributes as $atr => $value) {
             echo "<tr><td>" . $atr . "</td><td>" . $value[0] . "</td></tr>";

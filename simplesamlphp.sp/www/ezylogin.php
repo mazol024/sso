@@ -47,8 +47,8 @@
                 <div id="div-login-message" class="login-message-box" style="margin-bottom: 25px; display: none; background-color: #e74c3c; color: #ffffff; text-align: center; border-radius: 5px; border: 1px solid #96281B;">
                 </div>
                 <select name="idp" class="login-field shadowed" style="padding: 50px" >
-                    <option value="default-sp">Identity Provider Server1</option>
-                    <option value="nz-sp">Identity Provider Server2</option>
+                    <option value="idp01-sp">Identity Provider Server1</option>
+                    <option value="idp02-sp">Identity Provider Server2</option>
                 </select>
                <!-- <input placeholder='Identity Provider Server' list="email-data-list" class="login-field shadowed" type="text" name="login" id="input-email">
                 <input placeholder='Password' class="login-field shadowed" style="width:0; display:none;" type="password" name="fakepassword" id="fakepassword" />

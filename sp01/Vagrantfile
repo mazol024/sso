@@ -44,7 +44,7 @@ Vagrant.configure("2") do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
-  #config.vm.synced_folder "../simplesamlphp.sp", "/var/simplesamlphp"
+  config.vm.synced_folder "../simplesamlphp.sp", "/var/simplesamlphp"
 
   # Provider-specific configuration so you can fine-tune various
   # backing providers for Vagrant. These expose provider-specific options.
@@ -76,16 +76,17 @@ Vagrant.configure("2") do |config|
 	sudo hostname sp01
 	sudo cat "sp01" > /etc/hostname
 	sudo cp /vagrant/sam /etc/nginx/sites-available/sam
-	sudo cp /vagrant/idp.mymac.com.* /etc/nginx/ssl/
+	sudo cp /vagrant/sp.mymac.com.* /etc/nginx/ssl/
 	sudo ln -s /etc/nginx/sites-available/sam /etc/nginx/sites-enabled/sam
 	sudo cp /vagrant/simplesamlphp-1.16.2.tar.gz /home/vagrant
 	sudo tar xvfz simplesamlphp-1.16.2.tar.gz
 	sudo mkdir -p /var/simplesamlphp
 	sudo mv -f /home/vagrant/simplesamlphp-1.16.2/* /var/simplesamlphp/
 	sudo cp /vagrant/server.* /var/simplesamlphp/cert/
+	sudo cp /vagrant/saml* /var/simplesamlphp/cert/
 	sudo cp /vagrant/config* /var/simplesamlphp/config/
 	sudo cp /vagrant/auths* /var/simplesamlphp/config/
-	sudo cp /vagrant/saml* /var/simplesamlphp/metadata/
+	sudo cp /vagrant/saml2* /var/simplesamlphp/metadata/
 	sudo touch /var/simplesamlphp/modules/exampleauth/enable
 	sudo touch /var/simplesamlphp/modules/sqlauth/enable
 	sudo service nginx restart

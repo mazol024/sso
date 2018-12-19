@@ -7,7 +7,7 @@ require_once('../../lib/_autoload.php');
     $as->requireAuth(
         array(
             'isPassive' => false,
-            'ReturnTo' => 'https://sp.mymac.com/simplesaml/actions.ezy/ezystart.php',
+            'ReturnTo' => 'https://sp01/simplesaml/actions.ezy/ezystart.php',
         )
     );
 
