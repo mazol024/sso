@@ -11,7 +11,7 @@ $metadata['https://sp01/simplesaml/module.php/saml/sp/metadata.php/idp02-sp'] = 
     0 =>
     array (
       'Binding' => 'urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect',
-      'Location' => 'https://sp01/simplesaml/module.php/saml/sp/saml2-ezylogout.php/idp02-sp',
+      'Location' => 'https://sp01/simplesaml/module.php/saml/sp/saml2-logout.php/idp02-sp',
     ),
   ),
   'AssertionConsumerService' =>
